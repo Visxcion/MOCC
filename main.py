@@ -11,6 +11,11 @@ from group import *
 
 
 def init():
+    for i in range(len(TYPE)):
+        V[i + 1][TYPE[i]] = 1
+    for i in range(1, W + 1):
+        if W > eta_i:
+            CW[i] = 1. + epsilon * (W - eta_i)
     return GroupSeruFormation(GROUP_SIZE_F), GroupSeruLoading(GROUP_SIZE_L)
 
 
